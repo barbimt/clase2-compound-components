@@ -7,6 +7,7 @@ import {
 } from 'features/following/following.slices';
 import { FollowingButtonComponent } from 'features/following/button';
 import Character from 'features/characters/characters.types';
+import Card from './Card';
 
 export type CharactersComponentProps = {
   rickIDDS: number[];
@@ -34,7 +35,7 @@ const CharactersComponent: FC<CharactersComponentProps> = ({ rickIDDS }: Charact
       {charactersArray.map((iHateThisChars) => (
         <div className={"card"} key={iHateThisChars.id}>
           <div className={"card-image"}>
-            <img src={iHateThisChars.image} />
+           <Card.Picture src={iHateThisChars.image} alt={iHateThisChars.name}/>
           </div>
           <div className={"card-body"}>
             <span>{iHateThisChars.name}</span>
