@@ -41,8 +41,9 @@ const CharactersComponent: FC<CharactersComponentProps> = ({
           </div>
           <div className={'card-body'}>
             <Card.Content>{iHateThisChars.name}</Card.Content>
-            <Card.Actions  isFav={followingIds.indexOf(iHateThisChars.id) >= 0}
-                onToggleFavorite={(setFav) => onToggleFavorite(iHateThisChars, setFav)}>
+            <Card.Actions  
+              isFav={followingIds.indexOf(iHateThisChars.id) >= 0}
+              onToggleFavorite={(setFav) => onToggleFavorite(iHateThisChars, setFav)}>
             </Card.Actions>
           </div>
         </div>
